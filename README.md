@@ -5,6 +5,8 @@ Flask-pymysql is a fork of Flask-mysqldb, which instead uses the PyMySQL driver,
 
 Changelog
 ---------
+### 0.2.5
+Currently, flask does not have _app_ctx_stack, use g instead
 
 ### 0.2.3
 This version now uses a kwarg dict which is passed to PyMySQL, there is no longer a curated list of attributes.

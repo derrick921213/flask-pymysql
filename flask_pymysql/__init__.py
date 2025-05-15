@@ -1,6 +1,6 @@
 import pymysql
 from pymysql import cursors
-from flask import _app_ctx_stack, current_app
+from flask import g, current_app
 
 
 class MySQL(object):
@@ -43,13 +43,13 @@ class MySQL(object):
             unsuccessful.
         """
 
-        ctx = _app_ctx_stack.top
+        ctx = g
         if ctx is not None:
             if not hasattr(ctx, 'mysql_db'):
                 ctx.mysql_db = self.connect
             return ctx.mysql_db
 
     def teardown(self, exception):
-        ctx = _app_ctx_stack.top
+        ctx = g
         if hasattr(ctx, 'mysql_db'):
             ctx.mysql_db.close()

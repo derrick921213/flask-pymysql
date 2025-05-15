@@ -8,8 +8,8 @@ from setuptools import setup
 
 setup(
     name='Flask-pymysql',
-    version='0.2.4',
-    url='https://github.com/rcbensley/flask-pymysql',
+    version='0.2.5',
+    url='https://github.com/derrick921213/flask-pymysql',
     license='MIT',
     author='Richard Bensley',
     author_email='richardbensley@gmail.com',
